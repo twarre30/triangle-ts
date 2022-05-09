@@ -1,6 +1,3 @@
-## Note to Kyle
-Just started, hope I am on the right track?
-
 # Instructions
 
 Determine if a triangle is equilateral, isosceles, or scalene.
