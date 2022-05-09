@@ -14,4 +14,27 @@ export class Triangle {
       side2 + side3 >= side1;
     return sidesArePositive && validatesTriangleInequality;
   }
+
+  get isEquilateral(): boolean {
+    if (!this.isValid) {
+      return false;
+    }
+    const [side1, side2, side3] = this.sides;
+    return side1 === side2 && side2 === side3 && side1 === side3;
+  }
+
+  get isIsosceles(): boolean {
+    if (!this.isValid) {
+      return false;
+    }
+    const [side1, side2, side3] = this.sides;
+    return side1 === side2 || side1 === side3 || side2 === side3;
+  }
+
+  get isScalene(): boolean {
+    if (!this.isValid) {
+      return false;
+    }
+    return !this.isIsosceles;
+  }
 }
